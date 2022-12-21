@@ -1,3 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 $color_navy: #0a192f;
 $color-grey: #8892b0;
 $color-green: #64ffda;
+$color-blue_light: #f0f8ff;
+$color-green_tint: rgba(100, 255, 218, 0.1);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $color_navy;
+  color: $color-grey;
+  counter-reset: item;
+  a {
+    color: $color-green;
+  }
+}
+
+header,
+main,
+nav,
+section,
+footer {
+  display: block;
+}
+
+section {
+  margin: 0px auto;
+  padding: 0px;
+  max-width: 1000px;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0px 10px;
+  font-weight: 600;
+  color: $color-grey;
+  line-height: 1.1;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  min-width: 50px;
+  max-width: 100px;
+  border: 1px solid $color-green;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: $color-green_tint;
+  }
+}
+
+.header {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-around;
+  &_logo {
+    font-weight: bold;
+    font-size: 2rem;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+  }
+  &_menu {
+    width: 100%;
+    &_wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+    &_item {
+      text-decoration: none;
+      margin: 10px 0 0 0;
+      color: $color-grey;
+      &:hover {
+        color: $color-green;
+      }
+      &::before {
+        counter-increment: item;
+        content: "0" counter(item) ".";
+        margin-right: 5px;
+        text-align: right;
+        color: $color-green;
+      }
+    }
+  }
+  &_dowload-cv {
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#hello {
+  .big_header {
+    font-size: clamp(40px, 7vw, 80px);
+  }
+  .mid_header {
+    font-size: clamp(40px, 5vw, 80px);
+  }
+  .my_name {
+    color: $color-grey_light;
+  }
+  .greeting {
+    color: $color-green;
+    padding-bottom: 30px;
+    font-family: monospace, monospace;
+  }
+  .who {
+    margin: 30px 0 0 0;
+    max-width: 460px;
+    line-height: 1.3em;
+  }
+}
+
+#about {
+}
