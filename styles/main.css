@@ -262,12 +262,14 @@ h6 {
 }
 
 #experience .experience-wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 #experience .experience-tablist {
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,5 +277,9 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#experience .experience-jobs {
+  width: 60%;
 }
 /*# sourceMappingURL=main.css.map */
