@@ -25,6 +25,14 @@ footer {
   display: block;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 section {
   margin: 0px auto;
   padding: 0px;
@@ -114,6 +122,26 @@ h6 {
   height: 1px;
   margin-left: 20px;
   background-color: #8892b0;
+}
+
+.list-type-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  font-size: smaller;
+}
+
+.list-type-arrow .arrow-item {
+  width: 50%;
+}
+
+.list-type-arrow .arrow-item::before {
+  content: "ᐅ";
+  color: #64ffda;
+  margin-right: 20px;
 }
 
 .header {
@@ -212,26 +240,6 @@ h6 {
   display: flex;
 }
 
-#about .about-skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  list-style: none;
-  font-size: smaller;
-}
-
-#about .about-skills .skills-item {
-  width: 50%;
-}
-
-#about .about-skills .skills-item::before {
-  content: "ᐅ";
-  color: #64ffda;
-  margin-right: 20px;
-}
-
 #about .about-photo {
   max-width: 320px;
   margin-top: 22px;
@@ -251,5 +259,21 @@ h6 {
 #about .about-photo-item:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+
+#experience .experience-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#experience .experience-tablist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */

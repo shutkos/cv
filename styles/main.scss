@@ -30,6 +30,12 @@ section,
 footer {
   display: block;
 }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 
 section {
   margin: 0px auto;
@@ -101,6 +107,25 @@ h6 {
       height: 1px;
       margin-left: 20px;
       background-color: $color-grey;
+    }
+  }
+}
+
+.list-type {
+  &-arrow {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: smaller;
+    .arrow-item {
+      width: 50%;
+      &::before {
+        content: "ᐅ";
+        color: $color-green;
+        margin-right: 20px;
+        &_link {
+        }
+      }
     }
   }
 }
@@ -186,20 +211,7 @@ h6 {
     }
     &-text {
     }
-    &-skills {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      font-size: smaller;
-      .skills-item {
-        width: 50%;
-        &::before {
-          content: "ᐅ";
-          color: $color-green;
-          margin-right: 20px;
-        }
-      }
-    }
+
     &-photo {
       max-width: 320px;
       margin-top: 22px;
@@ -214,6 +226,20 @@ h6 {
           filter: grayscale(0);
         }
       }
+    }
+  }
+}
+
+#experience {
+  .experience {
+    &-wrapper {
+      display: flex;
+    }
+    &-tablist {
+      display: flex;
+      flex-direction: column;
+    }
+    &-jobs {
     }
   }
 }
