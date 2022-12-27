@@ -5,6 +5,8 @@ $color-green: #64ffda;
 $color-blue_light: #f0f8ff;
 $color-green_tint: rgba(100, 255, 218, 0.1);
 
+$font-mono: monospace, monospace;
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,9 +15,11 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: $color_navy;
   color: $color-grey;
-  counter-reset: item;
+  counter-reset: item item-title;
+  overflow-x: hidden;
   a {
     color: $color-green;
+    text-decoration: none;
   }
 }
 
@@ -37,6 +41,7 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
+  line-height: 1.5em;
 }
 
 h1,
@@ -66,6 +71,40 @@ h6 {
   }
 }
 
+.title {
+  color: $color-blue_light;
+  &-numbered {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(18px, 2vw, 36px);
+    white-space: nowrap;
+    &::before {
+      position: relative;
+      bottom: 0;
+      counter-increment: item-title;
+      content: "0" counter(item-title) ".";
+      margin-right: 10px;
+      color: $color-green;
+      font-family: $font-mono;
+      font-size: clamp(18px, 2vw, 36px);
+      font-weight: 400;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 0;
+      width: 240px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: $color-grey;
+    }
+  }
+}
+
 .header {
   display: flex;
   padding: 20px 0;
@@ -76,6 +115,19 @@ h6 {
     max-width: 320px;
     width: 100%;
     text-align: center;
+  }
+  .logo {
+    &-item {
+      color: $color-blue_light;
+      &::after {
+        content: "/>";
+        color: $color-grey;
+      }
+      &::before {
+        content: "<";
+        color: $color-grey;
+      }
+    }
   }
   &_menu {
     width: 100%;
@@ -114,19 +166,54 @@ h6 {
     font-size: clamp(40px, 5vw, 80px);
   }
   .my_name {
-    color: $color-grey_light;
+    color: $color-blue_light;
   }
   .greeting {
     color: $color-green;
     padding-bottom: 30px;
-    font-family: monospace, monospace;
+    font-family: $font-mono;
   }
   .who {
     margin: 30px 0 0 0;
     max-width: 460px;
-    line-height: 1.3em;
   }
 }
 
 #about {
+  .about {
+    &-wrapper {
+      display: flex;
+    }
+    &-text {
+    }
+    &-skills {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      font-size: smaller;
+      .skills-item {
+        width: 50%;
+        &::before {
+          content: "ᐅ";
+          color: $color-green;
+          margin-right: 20px;
+        }
+      }
+    }
+    &-photo {
+      max-width: 320px;
+      margin-top: 22px;
+      border-radius: 5px;
+      &-item {
+        width: 100%;
+        border: 1px solid $color-green;
+        border-radius: 5px;
+        filter: grayscale(100%);
+        transition: 1s;
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 html {
   scroll-behavior: smooth;
@@ -7,11 +8,13 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #0a192f;
   color: #8892b0;
-  counter-reset: item;
+  counter-reset: item item-title;
+  overflow-x: hidden;
 }
 
 body a {
   color: #64ffda;
+  text-decoration: none;
 }
 
 header,
@@ -41,6 +44,7 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  line-height: 1.5em;
 }
 
 h1,
@@ -71,6 +75,47 @@ h6 {
   background-color: rgba(100, 255, 218, 0.1);
 }
 
+.title {
+  color: #f0f8ff;
+}
+
+.title-numbered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(18px, 2vw, 36px);
+  white-space: nowrap;
+}
+
+.title-numbered::before {
+  position: relative;
+  bottom: 0;
+  counter-increment: item-title;
+  content: "0" counter(item-title) ".";
+  margin-right: 10px;
+  color: #64ffda;
+  font-family: monospace, monospace;
+  font-size: clamp(18px, 2vw, 36px);
+  font-weight: 400;
+}
+
+.title-numbered::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  width: 240px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #8892b0;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +131,20 @@ h6 {
   max-width: 320px;
   width: 100%;
   text-align: center;
+}
+
+.header .logo-item {
+  color: #f0f8ff;
+}
+
+.header .logo-item::after {
+  content: "/>";
+  color: #8892b0;
+}
+
+.header .logo-item::before {
+  content: "<";
+  color: #8892b0;
 }
 
 .header_menu {
@@ -133,7 +192,7 @@ h6 {
 }
 
 #hello .my_name {
-  color: #b0c4de;
+  color: #f0f8ff;
 }
 
 #hello .greeting {
@@ -145,6 +204,52 @@ h6 {
 #hello .who {
   margin: 30px 0 0 0;
   max-width: 460px;
-  line-height: 1.3em;
+}
+
+#about .about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#about .about-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  font-size: smaller;
+}
+
+#about .about-skills .skills-item {
+  width: 50%;
+}
+
+#about .about-skills .skills-item::before {
+  content: "ᐅ";
+  color: #64ffda;
+  margin-right: 20px;
+}
+
+#about .about-photo {
+  max-width: 320px;
+  margin-top: 22px;
+  border-radius: 5px;
+}
+
+#about .about-photo-item {
+  width: 100%;
+  border: 1px solid #64ffda;
+  border-radius: 5px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#about .about-photo-item:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 /*# sourceMappingURL=main.css.map */
