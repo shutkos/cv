@@ -251,7 +251,7 @@ h6 {
         padding: 0px 20px 2px;
         border-left: 2px solid $color-green_tint;
         transition: 1s;
-
+        color: $color-grey;
         &:hover {
           cursor: pointer;
           background: $color-grey;
