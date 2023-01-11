@@ -42,7 +42,8 @@
             <div class="about-wrapper">
                 <div class="about-text">
                     <p>Hello my name is Kostiantyn and I enjoy things that live on the internet.</p>
-                    <p>My interest in internet technologies started in 2005, when I started working as a system
+                    <p>
+                        My interest in internet technologies started in 2005, when I started working as a system
                         administrator after the Orange Revolution.</p>
                     <p>Now the revolution and the war have changed my life, I had to leave Ukraine.</p>
                     <p>I have completed several online courses in javascript and I am looking for a job.</p>
@@ -51,7 +52,7 @@
                     <ul class="list-type-arrow">
                         <li class="arrow-item">HTML 5</li>
                         <li class="arrow-item">CSS</li>
-                        <li class="arrow-item">JavaScript(es6+)</li>
+                        <li class="arrow-item">JavaScript</li>
                         <li class="arrow-item">PHP</li>
                     </ul>
                     <p>Here are a few links for the courses I have completed:</p>
@@ -72,68 +73,129 @@
             <h2 class="title title-numbered">Where I've Worked</h2>
             <div class="experience-wrapper">
                 <div class="experience-tablist">
-                    <button class="tab tab-3 active">Medical Information Resource</button>
-                    <button class="tab tab-2">Medical Information Systems</button>
-                    <button class="tab tab-1">Global Vision</button>
-                    <button class="tab tab-0">Trading house "Bohemia"</button>
+                    <button class="tab" type="button" data-tab="#job_1">Medical Information Resource</button>
+                    <button class="tab" type="button" data-tab="#job_2">Medical Information Systems</button>
+                    <button class="tab" type="button" data-tab="#job_3">Global Vision</button>
+                    <button class="tab" type="button" data-tab="#job_4">Trading house "Bohemia"</button>
                 </div>
                 <div class="experience-jobs">
-                    <div class="job-3 show">
-                        <h3>Medical Information Resource</h3>
+                    <div class="job" id="job_1">
+                        <h3>WebMaster - Medical Information Resource</h3>
                         <span class="date">March 2012 - Present</span>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Creating sites. From idea to web publishing. Using HTML, CSS, JavaScript, PHP;</li>
+                            <li>Development of the concept of web resources;</li>
+                            <li>Search engine optimisation;</li>
+                            <li>Google Analytics. Webmaster tools.</li>
+                            <li>Web server and operating system administration. CentOS;</li>
                         </ul>
                     </div>
-                    <div class="job-2 hide">
-                        <h3>Medical Information Systems</h3>
+                    <div class="job" id="job_2">
+                        <h3>WebMaster - Medical Information Systems</h3>
                         <span class="date">June 2009 - March 2012</span>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Creating sites. From design to web publishing Using HTML, CSS, JavaScript;</li>
+                            <li>Web server and operating system administration. CentOS;</li>
+                            <li>Search engine optimisation;</li>
+                            <li>Traffic analysis.</li>
+                            <li>Manually testing sites in various browsers;</li>
                         </ul>
                     </div>
-                    <div class="job-1 hide">
-                        <h3>Global Vision</h3>
+                    <div class="job" id="job_3">
+                        <h3>Studio Developer - Global Vision</h3>
                         <span class="date">June 2008 - June 2009</span>
                         <ul>
-                            <li>Website development. HTML, CSS, JavaScript;</li>
-                            <li>Manually tested sites in various browsers;</li>
+                            <li>Converting PSD files to HTML and CSS;</li>
+                            <li>Building landing pages using HTML, CSS, JavaScript;</li>
+                            <li>Manually testing sites in various browsers;</li>
                             <li>Search engine optimisation;</li>
-                            <li>Administration.</li>
+                            <li>Customer assistance.</li>
                         </ul>
                     </div>
-                    <div class="job-0 hide">
-                        <h3>Trading house "Bohemia"</h3>
+                    <div class="job" id="job_4">
+                        <h3>System Administrator - Trading house "Bohemia"</h3>
                         <span class="date">September 2005 - May 2008</span>
                         <ul>
                             <li>Local network administration;</li>
                             <li>Server administration on windows 2003;</li>
                             <li>Users helpdesk;</li>
-                            <li>Manage content and search engine optimisation;</li>
+                            <li>Search engine optimisation</li>
+                            <li>Manage content;</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
         </section>
-        <section id="portfolio">
+        <section id="portfolio" class="portfolio">
             <h2 class="title title-numbered">Some Things I’ve Built</h2>
-
+            <div class="portfolio-wrapper">
+                <a href="https://ms-ua.com" class="portfolio-item">
+                    <h4 class="portfolio-header">Multiple Sclerosis Portal</h4>
+                    <p class="portfolio-description">An information site for people with multiple sclerosis and their
+                        relatives.</p>
+                    <p class="portfolio-link">www.ms-ua.com</p>
+                    <ul class="portfolio-stack list-type-arrow">
+                        <li class="arrow-item">Photoshop</li>
+                        <li class="arrow-item">HTML</li>
+                        <li class="arrow-item">SCSS</li>
+                        <li class="arrow-item">JavaScript</li>
+                    </ul>
+                </a>
+                <a href="https://edu.shdm.school/" class="portfolio-item">
+                    <h4 class="portfolio-header">Evidence-based medicine</h4>
+                    <p class="portfolio-description">A system for training doctors on which they can take advanced
+                        training courses.</p>
+                    <p class="portfolio-link">www.edu.shdm.school</p>
+                    <ul class="portfolio-stack list-type-arrow">
+                        <li class="arrow-item">Photoshop</li>
+                        <li class="arrow-item">HTML</li>
+                        <li class="arrow-item">SCSS</li>
+                        <li class="arrow-item">JavaScript</li>
+                    </ul>
+                </a>
+                <a href="https://edu.neuro-roche.com.ua/" class="portfolio-item">
+                    <h4 class="portfolio-header">Presentation for neurologists</h4>
+                    <p class="portfolio-description">Educational site-presentation with elements of knowledge
+                        verification in the form of a test .</p>
+                    <p class="portfolio-link">www.edu.neuro-roche.com.ua</p>
+                    <ul class="portfolio-stack list-type-arrow">
+                        <li class="arrow-item">HTML</li>
+                        <li class="arrow-item">SCSS</li>
+                        <li class="arrow-item">JavaScript</li>
+                    </ul>
+                </a>
+                <a href="https://shdm.school/" class="portfolio-item">
+                    <h4 class="portfolio-header">shdm.school</h4>
+                    <p class="portfolio-description">A specialized portal for otolaryngologists, based on the principles
+                        of evidence-based medicine</p>
+                    <p class="portfolio-link">www.shdm.school</p>
+                    <ul class="portfolio-stack list-type-arrow">
+                        <li class="arrow-item">HTML</li>
+                        <li class="arrow-item">SCSS</li>
+                        <li class="arrow-item">JavaScript</li>
+                        <li class="arrow-item">Blade</li>
+                    </ul>
+                </a>
+            </div>
         </section>
-        <section id="contacts">
+        <section id="contacts" class="contacts">
             <h2 class="title title-numbered">What’s Next?</h2>
-            <h2>Get In Touch</h2>
-            <p>I am currently looking for new opportunities.</p>
-            <a href="mailto:shutkos@gmail.com">Write me</a>
+            <div class="contacts-content">
+                <h2 class="contacts-title">Get In Touch</h2>
+                <p class="contacts-text">I'm currently looking for new opportunities.
+                    My mail is always open for you! If
+                    you just want to say hello or suggest
+                    something interesting, I will always answer
+                    you!</p>
+                <a class="button contacts-button" href="mailto:shutkos@gmail.com">Write me</a>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p class="copyright">Designed & Built by &lt;shutkos/&gt;
+        </p>
+    </footer>
 
     <script src="/js/main.js"></script>
 </body>
