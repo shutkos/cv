@@ -28,3 +28,10 @@ function onTabClick(tab) {
     });
 }
 document.querySelector(".tab").click();
+
+
+const burger = document.querySelector("#burger");
+
+burger.addEventListener("click", (event) => {
+    //console.log(burger);
+})

@@ -5,6 +5,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #0a192f;
   color: #8892b0;
@@ -35,7 +37,7 @@ footer {
 
 section {
   margin: 0px auto;
-  padding: 0px;
+  padding: 0px 20px;
   max-width: 1000px;
   min-height: 100vh;
   height: 100vh;
@@ -145,10 +147,14 @@ h6 {
 }
 
 .header {
+  width: calc(100% - 20px);
+  position: fixed;
+  z-index: 999;
+  background-color: #0a192f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 0;
+  padding: 20px 10px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -161,16 +167,16 @@ h6 {
   text-align: center;
 }
 
-.header .logo-item {
+.header_logo_item {
   color: #f0f8ff;
 }
 
-.header .logo-item::after {
+.header_logo_item::after {
   content: "/>";
   color: #8892b0;
 }
 
-.header .logo-item::before {
+.header_logo_item::before {
   content: "<";
   color: #8892b0;
 }
@@ -209,6 +215,48 @@ h6 {
   max-width: 320px;
   width: 100%;
   text-align: center;
+}
+
+.header_burger {
+  display: none;
+}
+
+.header_burger_button {
+  background: none;
+  height: 41px;
+  position: relative;
+}
+
+.header_burger_line {
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background-color: #64ffda;
+  top: 9px;
+}
+
+.header_burger_line::before {
+  content: "";
+  border-radius: 3px;
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: #64ffda;
+  top: 9px;
+}
+
+.header_burger_line::after {
+  content: "";
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background-color: #64ffda;
+  top: 18px;
 }
 
 #hello .big_header {
@@ -324,12 +372,17 @@ h6 {
 
 #portfolio .portfolio-wrapper {
   padding: 0px;
-  margin: 50px 0px 0px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #portfolio .portfolio-item {
@@ -348,7 +401,7 @@ h6 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 2rem 1.75rem;
+  padding: 1.5rem 1.25rem;
   border: 1px solid #112240;
   border-radius: 5px;
   -webkit-transition: 1s;
@@ -386,4 +439,23 @@ h6 {
   color: #64ffda;
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header_menu {
+    display: none;
+  }
+  .header_burger {
+    display: block;
+  }
+}
+
+/* TODO
+* add adaptive
+* fixed menu
+*/
 /*# sourceMappingURL=main.css.map */
