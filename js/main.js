@@ -30,8 +30,35 @@ function onTabClick(tab) {
 document.querySelector(".tab").click();
 
 
-const burger = document.querySelector("#burger");
+const burger = document.querySelector(".header_burger_button");
+const menu = document.querySelector(".header_menu");
+const menuItem = document.querySelectorAll(".header_menu_item");
+const logo = document.querySelector(".header_logo_item");
+
 
 burger.addEventListener("click", (event) => {
-    //console.log(burger);
+    if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+    } else {
+        menu.classList.add("show");
+    }
+    burger.classList.toggle("close");
+});
+
+logo.addEventListener("click", (event) => {
+    setTimeout(() => {
+        menu.classList.remove("show");
+        burger.classList.toggle("close");
+    }, 500);
 })
+
+menuItem.forEach(item => {
+    item.addEventListener("click", (event) => {
+        setTimeout(() => {
+            menu.classList.remove("show");
+            burger.classList.toggle("close");
+        }, 500);
+    })
+});
+
+

@@ -147,20 +147,9 @@ h6 {
     max-width: 320px;
     width: 100%;
     text-align: center;
+    z-index: 999;
   }
-  &_logo {
-    &_item {
-      color: $color-blue_light;
-      &::after {
-        content: "/>";
-        color: $color-grey;
-      }
-      &::before {
-        content: "<";
-        color: $color-grey;
-      }
-    }
-  }
+
   &_menu {
     width: 100%;
     &_wrapper {
@@ -194,6 +183,7 @@ h6 {
       background: none;
       height: 41px;
       position: relative;
+      transition: 0.3s ease-in-out;
     }
     &_line {
       border-radius: 3px;
@@ -203,6 +193,7 @@ h6 {
       width: 25px;
       background-color: $color-green;
       top: 9px;
+      transition: 0.3s ease-in-out;
       &::before {
         content: "";
         border-radius: 3px;
@@ -212,6 +203,7 @@ h6 {
         width: 30px;
         background-color: $color-green;
         top: 9px;
+        transition: 0.3s ease-in-out;
       }
       &::after {
         content: "";
@@ -222,6 +214,7 @@ h6 {
         width: 25px;
         background-color: $color-green;
         top: 18px;
+        transition: 0.3s ease-in-out;
       }
     }
   }
@@ -254,6 +247,7 @@ h6 {
       display: flex;
     }
     &-text {
+      padding: 20px;
     }
 
     &-photo {
@@ -265,7 +259,7 @@ h6 {
         border: 1px solid $color-green;
         border-radius: 5px;
         filter: grayscale(100%);
-        transition: 1s;
+        transition: 0.3s ease-in-out;
         &:hover {
           filter: grayscale(0);
         }
@@ -316,6 +310,7 @@ h6 {
     display: none;
     &.show {
       display: block;
+      min-height: 240px;
     }
   }
 }
@@ -379,8 +374,3 @@ h6 {
 }
 
 @import "_mobile";
-
-/* TODO
-* add adaptive
-* fixed menu
-*/
