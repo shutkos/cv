@@ -100,13 +100,13 @@
   }
   #portfolio {
     .portfolio-header {
-      display: none;
+      //display: none;
     }
     .portfolio-description {
-      display: none;
+      //display: none;
     }
     .portfolio-wrapper {
-      grid-template-columns: repeat(2, minmax(300px, 1fr));
+      grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
     .portfolio-link {
       margin: 0;
@@ -123,9 +123,37 @@
 }
 
 @media (max-width: 800px) {
+  section {
+    padding-top: 100px;
+    height: auto;
+    min-height: 60vh;
+  }
 }
 
 @media (max-width: 768px) {
+  #experience {
+    .experience {
+      &-wrapper {
+        flex-direction: column;
+      }
+      &-tablist {
+        width: 100%;
+        flex-direction: row;
+        margin: 0;
+        .tab {
+          min-height: 42px;
+          height: auto;
+        }
+      }
+      &-jobs {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+  .header_menu_wrapper {
+    padding-left: 25vw;
+  }
 }
 
 @media (max-width: 736px) {
@@ -138,6 +166,30 @@
 }
 
 @media (max-width: 640px) {
+  #experience {
+    .experience {
+      &-tablist {
+        display: none;
+      }
+    }
+    .job {
+      display: block;
+    }
+  }
+  #about {
+    .about {
+      &-wrapper {
+        flex-direction: column-reverse;
+      }
+      &-photo {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .header_menu_wrapper {
+    padding-left: 20vw;
+  }
 }
 
 @media (max-width: 568px) {
@@ -147,6 +199,10 @@
 }
 
 @media (max-width: 480px) {
+  .header_download-cv {
+    width: 100%;
+    max-width: 260px;
+  }
 }
 
 @media (max-width: 414px) {
@@ -159,7 +215,26 @@
 }
 
 @media (max-width: 360px) {
+  #portfolio {
+    .portfolio {
+      &-wrapper {
+        grid-template-columns: repeat(1, minmax(260px, 1fr));
+      }
+    }
+  }
+  .list-type-arrow {
+    padding-left: 10px;
+    .arrow-item {
+      width: 100%;
+    }
+  }
+  .header_menu_wrapper {
+    padding-left: 8vw;
+  }
 }
 
 @media (max-width: 320px) {
+  .header_menu_wrapper {
+    padding-left: 4vw;
+  }
 }

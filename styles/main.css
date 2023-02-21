@@ -521,21 +521,102 @@ h6 {
     max-width: 200px;
     margin-top: 40px;
   }
-  #portfolio .portfolio-header {
-    display: none;
-  }
-  #portfolio .portfolio-description {
-    display: none;
-  }
   #portfolio .portfolio-wrapper {
-    -ms-grid-columns: (minmax(300px, 1fr))[2];
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
   #portfolio .portfolio-link {
     margin: 0;
   }
   .list-type-arrow .cert {
     width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    padding-top: 100px;
+    height: auto;
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #experience .experience-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #experience .experience-tablist {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0;
+  }
+  #experience .experience-tablist .tab {
+    min-height: 42px;
+    height: auto;
+  }
+  #experience .experience-jobs {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .header_menu_wrapper {
+    padding-left: 25vw;
+  }
+}
+
+@media (max-width: 640px) {
+  #experience .experience-tablist {
+    display: none;
+  }
+  #experience .job {
+    display: block;
+  }
+  #about .about-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #about .about-photo {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .header_menu_wrapper {
+    padding-left: 20vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_download-cv {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 360px) {
+  #portfolio .portfolio-wrapper {
+    -ms-grid-columns: (minmax(260px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(260px, 1fr));
+  }
+  .list-type-arrow {
+    padding-left: 10px;
+  }
+  .list-type-arrow .arrow-item {
+    width: 100%;
+  }
+  .header_menu_wrapper {
+    padding-left: 8vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .header_menu_wrapper {
+    padding-left: 4vw;
   }
 }
 /*# sourceMappingURL=main.css.map */

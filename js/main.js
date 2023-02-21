@@ -61,4 +61,6 @@ menuItem.forEach(item => {
     })
 });
 
-
+const myExperience = document.querySelector(".myExperience");
+const startDate = 2009;
+myExperience.innerHTML = new Date().getFullYear() - startDate;
